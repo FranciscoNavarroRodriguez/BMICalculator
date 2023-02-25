@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #0A0E21;
+    Overflow: hidden;
+}
+.titulo{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    margin-top: 25px;
+}
+.row{
+    margin-top: 20px;
+}
+.fondoitem{
+    background-color: #FF111328;
+    height: 130px;
+    border-radius: 20px;
+    color: white;
+}
+.btn-color{
+    background-color: #FF3366;
+    border-color: #FF3366;
+    color: white;
+    border-radius: 25px;
+    width: 100%;
+    &:hover{
+        background-color: #FF3366;
+        border-color: #FF3366;
+        color: white;
+        opacity: .9;
+        }
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.interpretacion{
+    font-size: 18px;
+    margin: 10px;
+    padding: 0px 50px;
+    text-align: center;
+}
+.footer{
+    position: fixed;
+    bottom: 10px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color: white;
+}
+a:hover{
+    opacity: 0.8;
+}

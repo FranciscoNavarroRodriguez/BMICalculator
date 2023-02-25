@@ -1,0 +1,79 @@
+<div class="row">
+    <div class="col-lg-4 offset-lg-4">
+        <h2 class="titulo">BMI CALCULATOR</h2>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="fondoitem" [ngClass]="sexo=='femenino'? 'sexoDesactivado': ''">
+                    <div class="contenedor" style="cursor: pointer" (click)="seleccionarSexo('masculino')">
+                        <i class="bi bi-gender-male sexo"></i>
+                        <p>Hombre</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="fondoitem" [ngClass]="sexo=='masculino'? 'sexoDesactivado': ''">
+                    <div class="contenedor" style="cursor: pointer" (click)="seleccionarSexo('femenino')">
+                        <i class="bi bi-gender-female sexo"></i>
+                        <p>Mujer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="fondoitem">
+                    <div class="contenedor">
+                        <p>Altura</p>
+                        <div class="estiloNumero">
+                            {{altura}}
+                            <span class="cm">cm</span>
+                        </div>
+                        <input type="range" [value]="altura" (input)="cambiarAltura($event)" min="120" max="220" class="form-range">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="fondoitem">
+                    <div class="contenedor">
+                        <p>Peso</p>
+                        <div class="estiloNumero">
+                            {{peso}}
+                        </div>
+                        <div>
+                            <i class="bi bi-dash sumaResta" (click)="peso = peso -1"></i>
+                            <i class="bi bi-plus sumaResta" (click)="peso = peso +1"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="fondoitem">
+                    <div class="contenedor">
+                        <p>Edad</p>
+                        <div class="estiloNumero">
+                            {{edad}}
+                        </div>
+                        <div>
+                            <i class="bi bi-dash sumaResta" (click)="edad = edad -1"></i>
+                            <i class="bi bi-plus sumaResta" (click)="edad = edad +1"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <button (click)="calcularBMI()" class="btn btn-lg btn-block btn-color">Calcular</button>
+            </div>
+        </div>
+        <div class="row">
+        </div>
+    </div>
+</div>
+<div class="col-lg-12 footer">
+    <a href="https://github.com/Quini95" target="_blank">
+    @FranNavarro <i class="bi bi-github"></i>
+    </a>    
+</div>
